@@ -8,6 +8,7 @@ services:
       - FLOWISE_USERNAME=${FLOWISE_USERNAME:-user}
       - FLOWISE_PASSWORD=${FLOWISE_PASSWORD:-password}
       - FLOWISE_SECRETKEY_OVERWRITE=${FLOWISE_SECRETKEY_OVERWRITE:-myencryptionkey}
+      - npx flowise start --CORS_ORIGINS=* --IFRAME_ORIGINS=*
     ports:
       - '${PORT:-3000}:${PORT:-3001}'
     volumes:
